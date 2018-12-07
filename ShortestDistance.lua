@@ -2,6 +2,7 @@
 
 local str= "joycastleisnotacastle"
 local dum = 't'
+local CONST_MAX_LEN = 1000 --最大字符长度
 --[[
     @param str 字符串
     @param dum 字符
@@ -15,6 +16,11 @@ function  shortestDistance(str,dum)
 
 	--字符串变成数组
 	local k = string.len(str)
+
+	if CONST_MAX_LEN > k then
+		return {}
+	end
+
 	local list ={}
 	for i=1,k do
 	    list[i]=string.sub(str,i,i)
@@ -50,7 +56,7 @@ function  shortestDistance(str,dum)
 	if index > 1 then
 		local map = {}
 		for i,val in pairs(list) do
-			local min = 99999999999
+			local min = CONST_MAX_LEN
 			for k,pos in pairs(dest) do
 				local tmp = math.abs(i - pos)
 				if tmp < min then
