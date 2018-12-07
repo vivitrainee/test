@@ -17,7 +17,7 @@ function  shortestDistance(str,dum)
 	--字符串变成数组
 	local k = string.len(str)
 
-	if CONST_MAX_LEN > k then
+	if CONST_MAX_LEN < k then
 		return {}
 	end
 
