@@ -1,5 +1,5 @@
 
-
+--
 local str= "joycastleisnotacastle"
 local dum = 't'
 local CONST_MAX_LEN = 1000 --最大字符长度
